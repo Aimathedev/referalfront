@@ -10,7 +10,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // ✅ Use POST instead of GET and remove spaces in URL
       const res = await fetch("http://localhost:3000/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -24,7 +23,6 @@ const Login = () => {
         return;
       }
 
-      // ✅ Store user info or tokens if needed
       localStorage.setItem("email", data.user.email);
       localStorage.setItem("userId", data.user.id);
 
@@ -74,7 +72,7 @@ const Login = () => {
           <Link to="/signup" className="login-link">
             Signup
           </Link>
-          <Link to="#" className="login-link">
+          <Link to="/forgot-password" className="login-link">
             Forget Password
           </Link>
           <Link to="/dashboard">Go to Dashboard</Link>
