@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Users, DollarSign, Link as LinkIcon, LogOut, Menu, X } from "lucide-react";
 import "../css/dashboard.css";
-
+import {Link} from "react-router-dom"
 const dashboardData = {
   totalReferrals: 15,
   totalEarnings: 125.5,
@@ -31,10 +31,12 @@ const Header = () => {
 
       <nav className={`nav-links ${isMenuOpen ? "open" : ""}`}>
         <a href="#dashboard">Dashboard</a>
-        <a href="#profile">Profile</a>
+        
+         <Link to="/profile"><a href="#profile">Profile</a></Link>
+         <Link to = "/">
         <a href="#logout" className="logout-btn">
           <LogOut size={16} /> Logout
-        </a>
+        </a></Link>
       </nav>
 
       <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
