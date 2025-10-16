@@ -153,8 +153,7 @@ const Signup = () => {
                 Login
               </Link>
             </p><br />
-             <a href="https://www.google.com/" className="login-link" >Continue with google</a>
-
+              <button type="submit" className="signup-button">Continue with Google</button>
           </div>
         </form>
       </div>

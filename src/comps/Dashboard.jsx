@@ -154,7 +154,6 @@ const Dashboard = () => {
                 </>
               )}
             </div>
-            {/* ==== Levels Section ==== */}
             <div className="referral-levels-section">
               <h3>Referral Levels</h3>
               <div className="levels-container">
@@ -172,7 +171,6 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              {/* ==== Summary Section ==== */}
               <div className="referral-summary-cards">
                 <div className="summary-card">
                   <h4>Direct Referrals</h4>

@@ -76,8 +76,7 @@ const Login = () => {
             Forget Password
           </Link>
           <Link to="/dashboard" className="login-link">Go to Dashboard</Link> <br />
-          <a href="https://www.google.com/" className="login-link" >Continue with google</a>
-
+             <button type="submit" className="Google-button">Continue  with Google</button>
         </div>
       </div>
       

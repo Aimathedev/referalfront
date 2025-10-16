@@ -209,7 +209,29 @@ body::before {
 .login-button:active {
   transform: scale(0.98);
 }
-
+.Google-button{
+   width: 200px;
+  max-width: 400px; 
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: calc(var(--radius) - 4px);
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)));
+  color: hsl(var(--primary-foreground));
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  margin: 0 auto; 
+  display: block;
+}
+.Google-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+.Google-button:active {
+  transform: scale(0.98);
+}
 
 .login-links {
   display: flex;
