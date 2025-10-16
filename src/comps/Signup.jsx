@@ -152,7 +152,9 @@ const Signup = () => {
               <Link to="/" className="login-link">
                 Login
               </Link>
-            </p>
+            </p><br />
+             <a href="https://www.google.com/" className="login-link" >Continue with google</a>
+
           </div>
         </form>
       </div>
@@ -161,6 +163,4 @@ const Signup = () => {
 };
 
 export default Signup;
-
 //check git
-

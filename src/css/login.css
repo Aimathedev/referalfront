@@ -219,6 +219,8 @@ body::before {
   max-width: 320px;
   margin-left: auto;
   margin-right: auto;
+  flex-wrap: wrap;
+  
 }
 
 .login-link {
@@ -226,11 +228,17 @@ body::before {
   text-decoration: none;
   transition: color 0.3s;
 }
+/* .login-link a{
+  align-items: center;
+  text-align: center;
+
+} */
 
 .login-link:hover {
   color: hsl(var(--primary));
   text-decoration: underline;
 }
+
 
 
 @keyframes shimmer-border {
