@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../css/signup.css"; // use same theme file
+import "../css/signup.css"; 
 import { useNavigate } from "react-router-dom";
-import { Camera } from "lucide-react"; // icon from lucide-react (already available)
+import { Camera } from "lucide-react"; 
 
 const EditProfile = () => {
   const navigate = useNavigate();
@@ -9,7 +9,6 @@ const EditProfile = () => {
   const [profilePic, setProfilePic] = useState(null);
   const [preview, setPreview] = useState(null);
 
-  // handle image upload
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -31,7 +30,6 @@ const EditProfile = () => {
         <h2 className="signup-title">Edit Your Profile</h2>
 
         <form className="signup-form" onSubmit={handleSubmit}>
-          {/* Profile Picture Upload */}
           <div className="profile-pic-section">
             <div className="profile-pic-wrapper">
               <img
@@ -52,7 +50,6 @@ const EditProfile = () => {
             </div>
           </div>
 
-          {/* Username Input */}
           <input
             type="text"
             name="username"
@@ -63,7 +60,6 @@ const EditProfile = () => {
             required
           />
 
-          {/* Save Button */}
           <button type="submit" className="signup-button">
             Save Changes
           </button>
