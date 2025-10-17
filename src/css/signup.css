@@ -227,3 +227,80 @@ body, html {
     font-size: 1.6rem;
   }
 }
+/* ================= Edit Profile Section ================= */
+.profile-pic-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.profile-pic-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-pic-preview {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid hsl(var(--accent));
+  box-shadow: 0 4px 10px hsla(0, 0%, 0%, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic-preview:hover {
+  transform: scale(1.05);
+}
+
+.camera-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(var(--accent));
+  color: white;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px hsla(0, 0%, 0%, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.camera-icon:hover {
+  transform: scale(1.1);
+  background-color: hsl(var(--accent) / 0.85);
+}
+
+/* ================= Mobile Responsive ================= */
+@media (max-width: 480px) {
+  .profile-pic-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .signup-title {
+    font-size: 1.4rem;
+  }
+
+  .form-input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .signup-button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .profile-pic-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .signup-title {
+    font-size: 1.2rem;
+  }
+}

@@ -159,14 +159,17 @@ const Dashboard = () => {
               <div className="levels-container">
                 <div className="level-card bronze">
                   <img src="/src/images/bronze.png" alt="Bronze Level" />
+                  <p>Bronze</p>
                   <p>Level 1</p>
                 </div>
                 <div className="level-card gold">
                   <img src="/src/images/gold.png" alt="Gold Level" />
+                  <p>Gold</p>
                   <p>Level 2</p>
                 </div>
                 <div className="level-card diamond">
                   <img src="/src/images/diamond.png" alt="Diamond Level" />
+                  <p>Diamond</p>
                   <p>Level 3</p>
                 </div>
               </div>

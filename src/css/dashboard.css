@@ -535,6 +535,7 @@ body {
 .level-card p {
   color: hsl(var(--muted-foreground));
   font-weight: 600;
+  z-index: 2;
 }
 
 .referral-levels-section {

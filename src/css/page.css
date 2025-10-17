@@ -188,3 +188,15 @@
     font-size: 1rem;
   }
 }
+
+.icon-btn {
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+  background-color: hsl(var(--accent) / 0.1);
+}
+
+
