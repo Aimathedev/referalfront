@@ -1,0 +1,78 @@
+.notification-container {
+  background: linear-gradient(135deg, #1f1f1f, #0f0f0f);
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.notification-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notification-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.notification-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.notification-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3b82f6;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content p {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.notification-time {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+@media (max-width: 480px) {
+  .notification-card {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .notification-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .notification-heading {
+    font-size: 1.4rem;
+  }
+
+  .notification-content p {
+    font-size: 0.85rem;
+  }
+}
