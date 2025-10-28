@@ -7,6 +7,10 @@
 // import Page from "./comps/Page";
 // import EditProfile from "./comps/EditProfile";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
 // const App = () => {
 //   return (
 //     <Router>
@@ -33,7 +37,11 @@ import ForgotPassword from "./comps/ForgotPassword";
 import Page from "./comps/Page";
 import EditProfile from "./comps/EditProfile";
 import Notification from "./comps/Notification";
+<<<<<<< HEAD
 import Subcription from "./comps/Subcription";
+=======
+
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
 
 const App = () => {
   return (
@@ -45,9 +53,17 @@ const App = () => {
       <Route path="/profile" element={<Page />} />
       <Route path="/edit-profile" element={<EditProfile />} />
       <Route path="/notifications" element={<Notification />} />
+<<<<<<< HEAD
       <Route path="/subc" element={<Subcription />} />
+=======
+
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
     </Routes>
   );
 };
 
 export default App;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af

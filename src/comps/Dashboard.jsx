@@ -53,10 +53,13 @@ const Header = () => {
         <Link to="/profile">
           <a href="#profile">Profile</a>
         </Link>
+<<<<<<< HEAD
 
         <Link to="/subc">
           <a href="#">Subcription</a>
         </Link>
+=======
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
         <Link to="/">
           <a href="#" className="logout-btn">
             <LogOut size={16} /> Logout

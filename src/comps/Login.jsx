@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/login.css";
+<<<<<<< HEAD
 import { GoogleLogin } from "@react-oauth/google";
+=======
+import { GoogleLogin  } from "@react-oauth/google";
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
 import { jwtDecode } from "jwt-decode"; // ✅ Correct import
 
 const Login = () => {
@@ -9,7 +13,10 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+<<<<<<< HEAD
   // 🔹 Normal Email/Password Login
+=======
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -37,10 +44,20 @@ const Login = () => {
     }
   };
 
+<<<<<<< HEAD
   // 🔹 Google Login Handler
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
+=======
+  const handleGoogleSuccess = async (credentialResponse) => {
+    try {
+      const decoded = jwtDecode(credentialResponse.credential);
+      console.log("Google User:", credentialResponse);
+
+
+    
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
       console.log("Google User:", decoded);
 
       const res = await fetch("http://localhost:3000/google-login", {
@@ -122,7 +139,10 @@ const Login = () => {
           </Link>
           <br />
 
+<<<<<<< HEAD
           {/* ✅ Google Login Button */}
+=======
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
           <div className="google-login">
             <GoogleLogin
               onSuccess={handleGoogleSuccess}

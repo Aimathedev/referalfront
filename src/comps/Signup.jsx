@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/signup.css";
+<<<<<<< HEAD
+=======
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode"; // ✅ Correct import
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -60,7 +65,44 @@ const Signup = () => {
       setLoading(false);
     }
   };
+<<<<<<< HEAD
 
+=======
+  const handleGoogleSuccess = async (credentialResponse) => {
+    try {
+      const decoded = jwtDecode(credentialResponse.credential);
+      console.log("Google User:", credentialResponse);
+
+      console.log("Google User:", decoded);
+
+      const res = await fetch("http://localhost:3000/google-login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: decoded.name,
+          email: decoded.email,
+          picture: decoded.picture,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        localStorage.setItem("email", data.user.email);
+        localStorage.setItem("userId", data.user.id);
+        navigate("/dashboard");
+      } else {
+        alert("Google login failed");
+      }
+    } catch (error) {
+      console.error("Google Login Error:", error);
+      alert("Error while logging in with Google");
+    }
+  };
+  const handleGoogleError = () => {
+    alert("Google login failed. Please try again.");
+  };
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
   return (
     <div className="signup-container">
       <div className="signup-box">
@@ -127,11 +169,15 @@ const Signup = () => {
             className="form-input"
           />
 
+<<<<<<< HEAD
           <button
             type="submit"
             className="signup-button"
             disabled={loading}
           >
+=======
+          <button type="submit" className="signup-button" disabled={loading}>
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
             {loading ? "Creating Account..." : "Create Account"}
           </button>
 
@@ -152,8 +198,17 @@ const Signup = () => {
               <Link to="/" className="login-link">
                 Login
               </Link>
+<<<<<<< HEAD
             </p><br />
               <button type="submit" className="signup-button">Continue with Google</button>
+=======
+            </p>
+            <br />
+            <GoogleLogin
+              onSuccess={handleGoogleSuccess}
+              onError={handleGoogleError}
+            />
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
           </div>
         </form>
       </div>
@@ -162,4 +217,8 @@ const Signup = () => {
 };
 
 export default Signup;
+<<<<<<< HEAD
 //check git
+=======
+//check git
+>>>>>>> 0e8b14cbfa98d868944bea8654f7eafc3ac1e1af
