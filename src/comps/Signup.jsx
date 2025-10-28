@@ -62,11 +62,10 @@ const Signup = () => {
       setLoading(false);
     }
   };
+
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
-      console.log("Google User:", credentialResponse);
-
       console.log("Google User:", decoded);
 
       const res = await fetch("http://localhost:3000/google-login", {
@@ -93,9 +92,11 @@ const Signup = () => {
       alert("Error while logging in with Google");
     }
   };
+
   const handleGoogleError = () => {
     alert("Google login failed. Please try again.");
   };
+
   return (
     <div className="signup-container">
       <div className="signup-box">
@@ -197,4 +198,3 @@ const Signup = () => {
 };
 
 export default Signup;
-//check git

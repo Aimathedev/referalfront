@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import "../css/dashboard.css";
 import { Link } from "react-router-dom";
+
 const dashboardData = {
   totalReferrals: 15,
   totalEarnings: 125.5,
@@ -44,7 +45,7 @@ const Header = () => {
             strokeWidth="2"
           />
         </svg>
-        <h1>Refferal front</h1>
+        <h1>Referral Front</h1>
       </div>
 
       <nav className={`nav-links ${isMenuOpen ? "open" : ""}`}>
@@ -53,6 +54,11 @@ const Header = () => {
         <Link to="/profile">
           <a href="#profile">Profile</a>
         </Link>
+
+        <Link to="/subc">
+          <a href="#">Subscription</a>
+        </Link>
+
         <Link to="/">
           <a href="#" className="logout-btn">
             <LogOut size={16} /> Logout
@@ -154,6 +160,7 @@ const Dashboard = () => {
                 </>
               )}
             </div>
+
             <div className="referral-levels-section">
               <h3>Referral Levels</h3>
               <div className="levels-container">
