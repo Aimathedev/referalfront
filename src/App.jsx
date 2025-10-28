@@ -7,7 +7,6 @@
 // import Page from "./comps/Page";
 // import EditProfile from "./comps/EditProfile";
 
-
 // const App = () => {
 //   return (
 //     <Router>
@@ -34,7 +33,7 @@ import ForgotPassword from "./comps/ForgotPassword";
 import Page from "./comps/Page";
 import EditProfile from "./comps/EditProfile";
 import Notification from "./comps/Notification";
-
+import Subcription from "./comps/Subcription";
 
 const App = () => {
   return (
@@ -46,10 +45,9 @@ const App = () => {
       <Route path="/profile" element={<Page />} />
       <Route path="/edit-profile" element={<EditProfile />} />
       <Route path="/notifications" element={<Notification />} />
-
+      <Route path="/subc" element={<Subcription />} />
     </Routes>
   );
 };
 
 export default App;
-
