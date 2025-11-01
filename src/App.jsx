@@ -7,8 +7,8 @@ import ForgotPassword from "./comps/ForgotPassword";
 import Page from "./comps/Page";
 import EditProfile from "./comps/EditProfile";
 import Notification from "./comps/Notification";
-import Subcription from "./comps/Subcription";
-
+import Subcription from './comps/Subscrption';
+import Success from './comps/Success'
 const App = () => {
   return (
     <Routes>
@@ -20,6 +20,7 @@ const App = () => {
       <Route path="/edit-profile" element={<EditProfile />} />
       <Route path="/notifications" element={<Notification />} />
       <Route path="/subc" element={<Subcription />} />
+      <Route path="/success" element={<Success />} /> 
     </Routes>
   );
 };
