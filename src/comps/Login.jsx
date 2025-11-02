@@ -29,6 +29,7 @@ const Login = () => {
       // Store user info
       localStorage.setItem("email", data.user.email);
       localStorage.setItem("userId", data.user.id);
+      localStorage.setItem("token", data.token);
 
       navigate("/dashboard");
     } catch (err) {
@@ -58,6 +59,8 @@ const Login = () => {
       if (data.success) {
         localStorage.setItem("email", data.user.email);
         localStorage.setItem("userId", data.user.id);
+        
+        console.log(data.token)
         navigate("/dashboard");
       } else {
         alert("Google login failed");
@@ -71,6 +74,7 @@ const Login = () => {
   const handleGoogleError = () => {
     alert("Google login failed. Please try again.");
   };
+   
 
   // 🔹 UI
   return (

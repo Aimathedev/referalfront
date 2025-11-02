@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, LogOut } from "lucide-react";
 import "../css/subscrption.css";
-import PlanCard from "./planCard"; 
+import PlanCard from "./planCard";
 
 const Subcription = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -34,21 +34,21 @@ const Subcription = () => {
       <div className="main-container">
         <PlanCard
           img="/src/images/bronze.png"
-          title="Bronze"
+          title="bronze"
           cashback="30% cashback on each referral"
           withdrawals="Per week 1 withdrawal"
           tasks="3 Tasks"
         />
         <PlanCard
           img="/src/images/gold.png"
-          title="Gold"
+          title="gold"
           cashback="50% cashback on each referral"
           withdrawals="Per week 3 withdrawals"
           tasks="5 Tasks"
         />
         <PlanCard
           img="/src/images/diamond.png"
-          title="Diamond"
+          title="diamond"
           cashback="70% cashback on each referral"
           withdrawals="Per week 5 withdrawals"
           tasks="Unlimited Tasks"
